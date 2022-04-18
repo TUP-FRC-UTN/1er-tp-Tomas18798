@@ -1,0 +1,68 @@
+#NAV{
+    background-color: black;
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    /* width: 500px; */
+    overflow-y: auto;
+
+
+}
+@media screen and (max-width: 1000px) {
+    #NAV{
+    display:none;
+    }
+}
+.sombrearBotones{
+        background-color: white;
+    }
+    .perfil img {
+        margin:  auto;
+        display: block;
+        width: 220px;
+        border: 8px solid azure;
+        image-orientation: flip;
+    }
+    #DIVcontenido{
+        background-color: whitesmoke;
+    }
+    #contenidoNav{
+        color:white;
+        text-align: center;
+    }
+    #imgRedesSociales img{
+        display:block;
+        margin:auto;
+        height: 30px;
+    }
+    #menuNAV{
+        text-align:left;    
+    }
+    #divSobreMi,#form,#divEducacion {
+        display:none ;
+    }
+    .imgBtn {
+        height: 15px;
+        text-align: center;
+    }
+    .progress-bar{
+        background-color: teal;
+    }
+    .col-lg-10{
+        position: relative;
+        min-height: 1px;
+        padding-left: 0px;
+        padding-right:0px;
+        
+    }
+
+    
+    #invertir{
+        filter:invert(1);
+    }

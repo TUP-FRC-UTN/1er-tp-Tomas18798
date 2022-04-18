@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>TP 1 - PROG III</title>
+
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+
+$(document).ready(function(){
+
+    var height = $(window).height();
+    $('#NAV').height(height);
+    $("#formulario").click(function(){
+        $("#form").slideToggle();
+    });
+    $("#btnSobreMi").click(function(){
+        $("#divSobreMi").slideToggle();
+    });
+    $("#btnHabilidades").click(function(){
+        $("#divHabilidades").slideToggle();
+    });
+    $("#btnEducacion").click(function(){
+        $("#divEducacion").slideToggle();
+    });
+    $("#btnEutn").click(function(){
+        $("#divEutn").slideToggle();
+    });
+    $("#btnEit").click(function(){
+        $("#divEit").slideToggle();
+    });
+    $("#btnEcp").click(function(){
+        $("#divEcp").slideToggle();
+        
+    });
+    $("#btnSkills").click(function(){
+        $("#divSkills").slideToggle();
+    });
+    $("#invertir").click(function(){
+            $("#DIVcontenido").css("filter","invert(100%)")
+    });
+    $("#invertirL").click(function(){
+            $("#DIVcontenido").css("filter","invert(0%)")
+    });
+
+    $(".sombrearBotones").hover(function(){
+        $(this).css("background-color","whitesmoke")
+    },function(){
+        $(this).css("background-color","white")
+    });
+    $("#contactoDatos").hover(function(){
+        $(this).css("background-color","white")
+    },function(){
+        $(this).css("background-color","whitesmoke")
+    });
+    $("#contactoForm").hover(function(){
+        $(this).css("background-color","white")
+    },function(){
+        $(this).css("background-color","whitesmoke")
+    });
+});
+</script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/estilosTP.css">
+<style>
+    #inicio {
+        width: 100%;
+        height: 100vh;
+        background: url("img/fondo2.jpg") top center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body>
+<div class="row">
+    <!-- NAV -->
+    <div class="col-2" col-sm-0></div>
+    <div class="col-lg-2 " id="NAV"><br>
+        <div class="container" id="imagen">
+            <img src="img/yo2.JPG" alt="" class="img-fluid rounded-circle">
+        </div><br>
+        <div class="container" id="contenidoNav">
+            <h5>Tomas Gutierrez</h5><br>
+            <div class="row" id="imgRedesSociales">
+                <div class="col-1"></div>
+                <div class="col-3">
+                    <a href="https://www.instagram.com/tomasgutierreez/">
+                        <img src="img/instagram.png" alt=""> 
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="https://www.linkedin.com/in/tomas-maximiliano-gutierrez/">
+                        <img src="img/linkedin.png" alt=""> 
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="https://twitter.com/tomgutierrezz">
+                        <img src="img/logotipo-de-twitter.png" alt="">
+                    </a>
+                </div>
+            </div><br>
+            <div id="menuNAV"><br><br>
+                <ul>
+                    <h5><a href="#inicio">Inicio</a></h5>
+                    <h5><a href="#sobreMi">Sobre Mi</a></h5>
+                    <h5><a href="#divHab">Habilidades</a></h5>
+                    <h5><a href="#divEdu">Educacion</a></h5>
+                    <h5><a href="#divSk">Skills</a></h5>
+                    <h5><a href="#divForm">Contacto</a></h5>
+                </ul>
+            </div> <br>
+            <button id="invertir" style="text-align: center;">DarkMode</button>
+            <button id="invertirL" style="text-align: center;">LightMode</button>
+        </div>
+    </div>
+    <!-- CONTENIDO -->
+    <div class="col-lg-10 col-sm-12" id="CONTENIDO">
+        <!-- Inicio -->
+        <div id="inicio" class="d-flex flex-column justify-content-center align-items-center">
+            <div >
+              <h1>Gutierrez Tomas</h1>
+              <h3>Legajo: 112952</h3>
+              <br><hr><br>
+              <hr>
+              <button id="botonInicio" type="button" class="btn btn-secondary btn-lg" disabled>
+                  <a href="#contenido">
+                      <img src="img/flecha-hacia-abajo.png" alt="" style="height: 50px;">
+                  </a>
+                  
+              </button>
+            </div>
+        </div>
+         <!-- Contenido -->
+         <div>
+            <div class="row" id="contenido" >
+                <div class="col-12" id="DIVcontenido">
+                    <!-- Sobre Mi --><hr>
+                    <div class="container" id="sobreMi">
+                        <h3 class="sombrearBotones" id="btnSobreMi">
+                            Sobre Mi 
+                            <img class="imgBtn" src="img/flecha-hacia-abajo.png" alt="" >
+                        </h3>
+                        <div id="divSobreMi" >
+                        <p>Soy una persona comprometida, responsable, motivada y con ganas de crecer en el ámbito laboral. 
+                            Dispuesto a aportar todos mis conocimientos y a aprender de los demás tanto en mi especialidad como  en otras aréas donde me pueda desarrollar.</p>  
+                        </div><hr>
+                    </div>
+                    <!-- Habilidades -->
+                    <div class="container" id="divHab">
+                        <h3 class="sombrearBotones" id="btnHabilidades">Habilidades Personales
+                            <img class="imgBtn" src="img/flecha-hacia-abajo.png" alt="" >
+                        </h3>
+                        <div id="divHabilidades" class="row" style="display: none;">
+                            <div class="col-1"></div>
+                            <div class="col-5">
+                                <ul>
+                                    <li>Trabajo en equipo</li>
+                                    <li>Capacidad de analisis</li>
+                                    <li>Predispuesto a la capacitacion constante</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-5">
+                                <ul>
+                                    <li>Sentido de la responsabilidad</li>
+                                    <li>Autodidacta</li>
+                                    <li>Toma de deciciones</li>
+                                </ul>
+                            </div>
+                        </div><hr>
+                    </div>
+                    <!-- Educacion -->
+                    <div class="container" id="divEdu">
+                        <h3 class="sombrearBotones" id="btnEducacion">Educacion
+                            <img class="imgBtn" src="img/flecha-hacia-abajo.png" alt="" >
+                        </h3>
+                        <div id="divEducacion">
+                            <ul>
+                                <li>
+                                    <h5 id="btnEutn" class="sombrearBotones">Tecnico universitario en Programacion - Universidad Tecnologica Nacional</h5>
+                                    <h6>2021 - En curso</h6>
+                                    <div id="divEutn">
+                                        <ul>
+                                            <li>Interpretar y llevar a cabo la solución definida por el analista.
+                                                </li>
+                                            <li>Elaborar y/o corregir los programas mediante un lenguaje de desarrollo requerido por el mercado laboral.
+                                                </li>
+                                            <li>Brindar al usuario la posibilidad de optimizar  sus procesos acordes a las necesidades que impone la competencia del mercado.
+                                                </li>
+                                            <li>.NET C# - SQL - MongoDB - GIT - JAVA - HTML - CSS - Javascript - Angular</li>
+                                        </ul>
+                                    </div><hr>
+                                </li>
+                                <li>
+                                    <h5 id="btnEit" class="sombrearBotones">Desarrollador web full stack - PHP Developer - EducacionIT</h5>
+                                    <h6>Enero 2021 - Julio 2021</h6>
+                                    <div id="divEit" class="row">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <ul>
+                                                <li>HTML 5</li>
+                                                <li>CSS</li>
+                                                <li>SQL</li>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="col-5">
+                                            <ul>
+                                                <li>PHP y MySQL</li>
+                                                <li>Javascript</li>
+                                                <li>.Net C#</li>
+                                            </ul>
+                                        </div>
+                                    </div><hr>
+                                </li>
+                                <li>
+                                    <h5 id="btnEcp" class="sombrearBotones">Capacitacion Centro Pescar Golfo San Jorge - Pan American Energy</h5>
+                                    <h6>Enero 2021 - Julio 2021</h6>
+                                    <div id="divEcp">
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    La Fundación Pescar y Pan American Energy me otorgaron una beca, en la que fui seleccionado entre mas de 200 personas, para realizar la capacitación en Programación Web Full Stack, dictada por EducacionIT y a travez de un programa de mentores desarrollar habilidades de Oratoria y Emprendedorismo durante los 6 meses que duro la capacitacion.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+        
+                                </li>
+                            </ul>
+                            
+                        </div><hr>
+                    </div>
+                    <!-- SKILLS -->
+                    <div class="container" id="divSk">
+                        <h3 class="sombrearBotones" id="btnSkills">Skills
+                            <img class="imgBtn" src="img/flecha-hacia-abajo.png" alt="" >
+                        </h3>
+                        <div class="container">
+                            
+                            <div class="row skills-content" id="divSkills" style="display: none;">
+                                <div class="col-lg-6" data-aos="fade-up">
+        
+                                    <h6>HTML 5</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div><br>
+                                    <h6>CSS</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div><br>
+                                    <h6>Bootstrap</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div><br>
+                                    <h6>Javascript</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="col-lg-6" data-aos="fade-up">
+                                    <h6>C#</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div><br>
+                                    <h6>JAVA</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div><br>
+                                    <h6>PHP</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div><br>
+                                    <h6>SQL</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div><hr>
+                <!--         <div id="divSkills">
+                            <div id="myProgress">
+                                <div id="myBar"></div>
+                            </div>
+                            
+                        </div><hr> -->
+                    </div>
+                    <!-- Contacto -->
+                    <div class="container"  id="divForm"> 
+                        <h3 class="sombrearBotones" id="formulario">Contacto
+                            <img class="imgBtn" src="img/flecha-hacia-abajo.png" alt="" ><br>
+                        </h3>
+                        <div class="container" id="form">
+                            <div class="row">
+                             <!-- datos -->
+                                <div class="col-lg-5 col-sm-12" id="contactoDatos">
+                                    <div class="container"><hr>
+                                        <div class="email">
+                                            <h5>Email:</h5>
+                                            <p>tomasgutierrez187pr@gmail.com</p>
+                                        </div>
+                                        <div class="direccion">
+                                            <h5>Telefono:</h5>
+                                            <p>+54 9 (297) 5134003</p> 
+                                        </div>
+                                        <div class="direccion">
+                                            <h5>Direccion:</h5>
+                                            <p>Bv San Juan 639, Cordoba Capital (5000), Argentina</p>
+                                        </div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.830985681826!2d-64.19680118525825!3d-31.41878240351075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a280a28a4581%3A0x35dc6213d260678a!2sBlvd.%20San%20Juan%20639%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1648670830666!5m2!1ses!2sar" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            <!-- formulario -->
+                                <div class="col-lg-7 col-sm-12" id="contactoForm">
+                                    <div class="container"><hr>
+                                        <h5>Contactarse:</h5>
+                                        <form id="">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label id="txtNombre" for="inputNombre">Nombre</label>
+                                                <input name="nombre" type="text" class="form-control" id="inputNombre" placeholder="Inserte su nombre" >
+                                                
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label id="txtAsunto" for="inputAsunto">Asunto</label>
+                                                <input  name="asunto" type="text" class="form-control" id="inputAsunto" placeholder="Ingrese el asunto del correo" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label id="txtCorreo" for="inputEmail4">Correo Electronico</label>
+                                                <input name="correo"   class="form-control" id="inputCorreo" placeholder="nombre@correo.com" >
+                                        </div>
+                                        <div class="form-row">
+                                            <label for="name">Mensaje</label>
+                                            <textarea placeholder="El mensaje debe contener un minimo de 10 caracteres y un maximo de 150" id="inputMensaje" class="form-control" name="message" rows="10"  onkeyup="countChars(this);"></textarea>
+                                            <p id="contadorC">-</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input name="check" class="form-check-input" type="checkbox" id="inputCheck" >
+                                                <label id="txtTerminos" class="form-check-label" for="gridCheck">
+                                                    Acepto los terminos
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" onclick="validar()">Enviar</button><br>
+                                    
+                                    </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="js/scriptTP.js"></script>
+
+</body>
+</html>
